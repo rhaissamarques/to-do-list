@@ -6,10 +6,11 @@
 }
 
 .inputTask {
+  width: 46rem;
   background: var(--gray-400);
-  padding: .33rem 8rem .33rem 1rem;
   border-radius: 8px;
   text-align: left;
+  padding-left: 1rem;
 }
 
 .inputButton {
