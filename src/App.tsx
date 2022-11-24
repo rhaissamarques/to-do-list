@@ -1,10 +1,15 @@
 import styles from './App.css';
 import "./global.css";
 
+import { Header } from "./Components/Header";
+
 function App() {
 
   return (
-    <div>to-do-list here</div>
+    <>
+    <Header />
+      <div>to-do-list here</div>
+    </>
   )
 }
 
