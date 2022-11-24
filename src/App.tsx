@@ -3,6 +3,7 @@ import "./global.css";
 
 import { Header } from "./Components/Header";
 import { TaskBar } from './Components/TaskBar';
+import { TaskList } from './Components/TaskList';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
     <Header />
     <TaskBar />
+    <TaskList />
     </>
   )
 }
