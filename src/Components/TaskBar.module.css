@@ -1,0 +1,30 @@
+.taskForm {
+  margin-top: -1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.inputTask {
+  background: var(--gray-400);
+  padding: .33rem 8rem .33rem 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.inputButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  height: 3rem;
+
+  background: var(--blueDark);
+  color: var(--white);
+  border-radius: 8px;
+  font-size: .87rem;
+
+  gap: .3rem;
+}
