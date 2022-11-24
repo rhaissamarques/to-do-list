@@ -1,8 +1,16 @@
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 51rem;
+  margin: auto;
+}
+
+.tasksHead {
   margin-top: 7.18rem;
   margin-bottom: 1.5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .tasksCreated {
@@ -14,7 +22,7 @@
 }
 
 .line {
-  margin: 0 10rem 4rem 10rem;
+  margin-bottom: 4rem;
   border-top: 2px solid var(--gray-200);
 }
 
