@@ -6,23 +6,23 @@ import { TaskBar } from "./Components/TaskBar";
 import { TaskList } from "./Components/TaskList";
 import { ListItems, ListItemsProps } from "./Components/ListItems";
 
-const items: ListItemsProps[] = [
-  {
-    id: "1",
-    content: "primeiro item da lista",
-    isDone: false,
-  },
-  {
-    id: "2",
-    content: "segundo item da lista",
-    isDone: true,
-  },
-  {
-    id: "3",
-    content: "terceiro item da lista",
-    isDone: false,
-  },
-];
+// const items: ListItemsProps[] = [
+//   {
+//     id: "1",
+//     content: "primeiro item da lista",
+//     isDone: false,
+//   },
+//   {
+//     id: "2",
+//     content: "segundo item da lista",
+//     isDone: true,
+//   },
+//   {
+//     id: "3",
+//     content: "terceiro item da lista",
+//     isDone: false,
+//   },
+// ];
 
 function App() {
   return (
@@ -31,8 +31,8 @@ function App() {
       <div className={styles.wrapper}>
         <main>
           <TaskBar />
-          <TaskList />
-          {items.map((item) => {
+          {/* <TaskList /> */}
+          {/* {items.map((item) => {
             return (
               <ListItems
                 key={item.id}
@@ -40,7 +40,7 @@ function App() {
                 isDone={item.isDone}
               />
             );
-          })}
+          })} */}
         </main>
       </div>
     </>
