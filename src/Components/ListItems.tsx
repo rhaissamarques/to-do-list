@@ -5,13 +5,15 @@ export interface ListItemsProps {
   id?: string;
   content: string;
   isDone: boolean;
+  onDeleteTask: (content: string) => void
 }
 
-function handleDeleteComment() {
-  console.log("teste do botão");
-}
+export function ListItems({ id, content, isDone, onDeleteTask }: ListItemsProps) {
 
-export function ListItems({ id, content, isDone }: ListItemsProps) {
+  function handleDeleteTask() {
+    onDeleteTask(content)
+  }
+
   return (
     <>
       <main className={styles.main}>
@@ -20,7 +22,7 @@ export function ListItems({ id, content, isDone }: ListItemsProps) {
             <input type="radio" className={styles.isDone} />
             <span className={styles.listContent}>{content}</span>
           </div>
-          <button onClick={handleDeleteComment} title="Deletar tarefa">
+          <button onClick={handleDeleteTask} title="Deletar tarefa">
             <Trash size={24} />
           </button>
         </div>

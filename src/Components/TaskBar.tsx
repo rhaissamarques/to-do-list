@@ -3,6 +3,7 @@ import { PlusCircle } from "phosphor-react";
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
 import { ListItems } from "./ListItems";
 import { TaskList } from "./TaskList";
+import { TaskListEmpty } from "./TaskListEmpty";
 
 export interface TaskBarProps {
   content: string;
@@ -10,7 +11,7 @@ export interface TaskBarProps {
 }
 
 export function TaskBar({ content, isDone }: TaskBarProps) {
-  const [task, setTask] = useState(["criando uma tarefa"]);
+  const [task, setTask] = useState(['Criando uma tarefa']);
   const [newTask, setNewTask] = useState("");
 
   function handleCreateNewTask(event: FormEvent) {
@@ -30,6 +31,13 @@ export function TaskBar({ content, isDone }: TaskBarProps) {
     event.target.setCustomValidity("Campo obrigatório");
   }
 
+  function deleteTask(taskToDelete: string) {
+    const tasksWithoutDeletedOne = task.filter((task) => {
+      return task !== taskToDelete;
+    })
+    setTask(tasksWithoutDeletedOne);
+  }
+
   return (
     <>
       <form onSubmit={handleCreateNewTask} className={styles.taskForm}>
@@ -46,12 +54,15 @@ export function TaskBar({ content, isDone }: TaskBarProps) {
           <PlusCircle size={20} />
         </button>
       </form>
-      <TaskList />
+
+      {ListItems.length ? <TaskList /> : <TaskListEmpty />}
+      
       {task.map((item) => {
         return (
           <ListItems
             content={item}
             isDone={isDone}
+            onDeleteTask={deleteTask}
           />
         )
       })}
