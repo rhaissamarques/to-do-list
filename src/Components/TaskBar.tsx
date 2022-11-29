@@ -10,7 +10,7 @@ export interface TaskBarProps {
   isDone: boolean;
 }
 
-export function TaskBar({ content, isDone }: TaskBarProps) {
+export function TaskBar({ isDone }: TaskBarProps) {
   const [task, setTask] = useState(['Criando uma tarefa']);
   const [newTask, setNewTask] = useState("");
 
